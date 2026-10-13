@@ -15,7 +15,7 @@ An interactive gravity sandbox that runs entirely in your browser. Launch planet
 | Pause or resume | `Space` or the Pause button |
 | Reset the scenario | Reset button |
 
-The sliders change speed, the gravitational constant (G) and the mass of bodies you launch. Changing G mid-orbit is a good way to see what happens when the physics shifts underneath a stable system.
+The sliders change speed, the gravitational constant ($G$) and the mass of bodies you launch. Changing $G$ mid-orbit is a good way to see what happens when the physics shifts underneath a stable system.
 
 ## How it works
 
