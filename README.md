@@ -11,7 +11,7 @@ An interactive gravity sandbox that runs entirely in your browser. Launch planet
 | Launch a body | Click and drag on the canvas. The arrow shows the launch velocity: a longer drag is faster. |
 | Drop a stationary body | Click without dragging |
 | Zoom | Scroll wheel (zooms towards the cursor) |
-| Pan | Shift + drag, right-drag or middle-drag |
+| Pan | `Shift` + drag, right-drag or middle-drag |
 | Pause or resume | `Space` or the Pause button |
 | Reset the scenario | Reset button |
 
