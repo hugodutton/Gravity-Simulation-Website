@@ -4,36 +4,6 @@ An interactive gravity sandbox that runs entirely in your browser. Launch planet
 
 **Live demo:** https://hugodutton.github.io/Gravity-Simulation-Website/
 
-## Features
-
-- Real N-body physics: every body attracts every other body
-- Click and drag to launch new bodies with the mass and velocity you choose
-- Five scenarios: solar system, binary star with circumbinary planets, the figure-eight three-body orbit, a galaxy disc with an intruder, and a collapsing random cluster
-- Optional merging on collision, conserving mass and momentum
-- Live sliders for simulation speed, gravitational strength and new-body mass
-- Fading orbit trails, zoom and pan
-- An energy-drift readout so you can see how well the integrator conserves energy
-- Sharp rendering on high-DPI screens; touch devices can launch bodies
-
-## Getting started
-
-No install needed. Clone the repo and open `index.html` in a browser:
-
-```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
-cd YOUR-REPO
-open index.html        # or double-click the file
-```
-
-If you prefer a local server: `python3 -m http.server`, then visit `http://localhost:8000`.
-
-### Deploy with GitHub Pages
-
-1. Push the project to GitHub.
-2. Go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
-4. After a minute your site is live at `https://YOUR-USERNAME.github.io/YOUR-REPO/`.
-
 ## Controls
 
 | Action | How |
@@ -63,27 +33,9 @@ The sliders change speed, the gravitational constant (G) and the mass of bodies 
 
 Units are arbitrary. With G = 1, a body at distance `r` from mass `M` has circular orbital speed `√(G·M / r)`, which is what the scenarios use.
 
-## Project structure
-
-```
-├── index.html   # page layout and control panel
-├── style.css    # styling
-├── script.js    # physics, rendering and input handling
-└── README.md
-```
-
-## Customising
-
-- **Add a scenario:** add a function to the `presets` object in `script.js` (use `addBody` and `orbit`), then add a matching `<option value="yourName">` to the `#preset` select in `index.html`.
-- **Tune the physics:** `EPS2` (softening), the `0.05` maximum step size and the `0.7` merge distance in `script.js` are the main knobs.
-
 ## Limitations and ideas
 
 - The force calculation is O(n²). A few hundred bodies run smoothly on most machines; thousands would need a Barnes–Hut quadtree.
 - The simulation is 2D only.
 - Panning needs a mouse (or trackpad); touch screens can launch bodies and zoom is mouse-wheel only.
 - Ideas: follow-the-body camera, velocity arrows, saving and loading scenarios, elastic collisions.
-
-## License
-
-MIT. Add a `LICENSE` file (GitHub can generate one for you when you create the repository).
