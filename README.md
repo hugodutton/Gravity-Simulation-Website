@@ -2,9 +2,7 @@
 
 An interactive gravity sandbox that runs entirely in your browser. Launch planets, build solar systems, watch a galaxy get disturbed by a passing star, and see Newtonian gravity do the rest. It's plain HTML, CSS and vanilla JavaScript, with no frameworks, no build step and no dependencies.
 
-<!-- Add a screenshot or GIF here: ![N-body simulator](docs/screenshot.png) -->
-
-**Live demo:** `https://YOUR-USERNAME.github.io/YOUR-REPO/` (replace after enabling GitHub Pages, see below)
+**Live demo:** `https://hugodutton.github.io/Gravity-Simulation-Website/`
 
 ## Features
 
