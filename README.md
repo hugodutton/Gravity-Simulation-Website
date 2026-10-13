@@ -43,6 +43,7 @@ With merging on, two bodies that come within 70% of their combined radii become 
 #### Energy Drift:
 The panel compares total energy (kinetic plus potential) with a baseline. The baseline resets whenever you add a body, merge two, or change G, because those events change the energy on purpose.
 
-**Rendering.** Everything is drawn on a 2D canvas. Trails are produced by fading the previous frame rather than storing point histories, so they cost nothing; they are cleared when you pan or zoom.
+#### Rendering:
+Everything is drawn on a 2D canvas. Trails are produced by fading the previous frame rather than storing point histories, so they cost nothing; they are cleared when you pan or zoom.
 
-Units are arbitrary. With G = 1, a body at distance `r` from mass `M` has circular orbital speed `√(G·M / r)`, which is what the scenarios use.
+Units are arbitrary. With $G=1$, a body at distance $r$ from mass $M$ has circular orbital speed $\sqrt{\frac{G\cdot M}{r}}$, which is what the scenarios use.
