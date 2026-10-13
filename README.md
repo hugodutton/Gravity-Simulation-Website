@@ -19,7 +19,7 @@ The sliders change speed, the gravitational constant (G) and the mass of bodies 
 
 ## How it works
 
-#### Gravity
+#### Gravity:
 Each pair of bodies attracts with the force
 
 $$
@@ -31,14 +31,17 @@ $$
 
 The small softening term $\epsilon$ stops the force from blowing up when two bodies pass very close to each other. Forces are summed over every pair, so the cost grows with the square of the body count.
 
-#### Integration
-Positions and velocities are advanced with velocity Verlet (a kick-drift-kick leapfrog scheme). It is second-order accurate and symplectic, so energy errors stay bounded over long runs instead of steadily growing, which is why orbits stay orbits.
+#### Integration:
+Positions and velocities are advanced with Velocity Verlet (a kick-drift-kick leapfrog scheme). It is second-order accurate and symplectic, so energy errors stay bounded over long runs instead of steadily growing, which is why orbits stay orbits.
 
-**Time steps.** The simulation is sub-stepped so the step size never exceeds 0.05 time units, whatever the frame rate or speed setting. Simulated time is tied to real time, so it runs at the same pace on 60 Hz and 120 Hz displays.
+#### Time Steps:
+The simulation is sub-stepped so the step size never exceeds 0.05 time units, whatever the frame rate or speed setting. Simulated time is tied to real time, so it runs at the same pace on 60 Hz and 120 Hz displays.
 
-**Collisions.** With merging on, two bodies that come within 70% of their combined radii become one. The new body has the summed mass, the mass-weighted centre position and the momentum-conserving velocity. Radius follows mass assuming constant density.
+#### Collisions:
+With merging on, two bodies that come within 70% of their combined radii become one. The new body has the summed mass, the mass-weighted centre position and the momentum-conserving velocity. Radius follows mass assuming constant density.
 
-**Energy drift.** The panel compares total energy (kinetic plus potential) with a baseline. The baseline resets whenever you add a body, merge two, or change G, because those events change the energy on purpose.
+#### Energy Drift:
+The panel compares total energy (kinetic plus potential) with a baseline. The baseline resets whenever you add a body, merge two, or change G, because those events change the energy on purpose.
 
 **Rendering.** Everything is drawn on a 2D canvas. Trails are produced by fading the previous frame rather than storing point histories, so they cost nothing; they are cleared when you pan or zoom.
 
