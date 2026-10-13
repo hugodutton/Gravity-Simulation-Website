@@ -19,7 +19,7 @@ The sliders change speed, the gravitational constant (G) and the mass of bodies 
 
 ## How it works
 
-**Gravity.** Each pair of bodies attracts with the force $`F = G·m₁·m₂ / (r² + ε²)`$. The small softening term `ε` stops the force from blowing up when two bodies pass very close to each other. Forces are summed over every pair, so the cost grows with the square of the body count.
+**Gravity.** Each pair of bodies attracts with the force $$`F = G·m₁·m₂ / (r² + ε²)`$$. The small softening term `ε` stops the force from blowing up when two bodies pass very close to each other. Forces are summed over every pair, so the cost grows with the square of the body count.
 
 **Integration.** Positions and velocities are advanced with velocity Verlet (a kick-drift-kick leapfrog scheme). It is second-order accurate and symplectic, so energy errors stay bounded over long runs instead of steadily growing, which is why orbits stay orbits.
 
