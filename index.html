@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>N-Body Gravity Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="sim" aria-label="Gravity simulation"></canvas>
+  <canvas id="ui" aria-hidden="true"></canvas>
+
+  <details class="panel" open>
+    <summary>N-body Gravity Simulator</summary>
+    <div class="row">
+      <button id="play">Pause</button>
+      <button id="reset">Reset</button>
+      <button id="clear">Clear</button>
+    </div>
+    <label>Scenario
+      <select id="preset">
+        <option value="solar">Solar System</option>
+        <option value="binary">Binary Star</option>
+        <option value="figure8">Figure-Eight Orbit</option>
+        <option value="galaxy">Galaxy and Intruder</option>
+        <option value="cluster">Collapsing Cluster</option>
+      </select>
+    </label>
+    <label>Speed <b></b><input id="speed" type="range" min="0.1" max="5" step="0.1" value="1"></label>
+    <label>Gravity <b></b><input id="gravity" type="range" min="0.1" max="3" step="0.1" value="1"></label>
+    <label>New Body Mass <b></b><input id="mass" type="range" min="10" max="2000" step="10" value="100"></label>
+    <label class="check"><input id="trails" type="checkbox" checked> Show Trails</label>
+    <label class="check"><input id="merge" type="checkbox" checked> Merge on Collision</label>
+    <dl>
+      <dt>Bodies</dt><dd id="nBodies">0</dd>
+      <dt>Simulated Time</dt><dd id="tSim">0</dd>
+      <dt>Energy Drift</dt><dd id="drift">0%</dd>
+      <dt>Frame Rate</dt><dd id="fps">60</dd>
+    </dl>
+    <p class="hint">Drag on the sky to launch a body; a longer drag launches it faster. Scroll to zoom, Shift-drag or right-drag to pan, Space to pause.</p>
+  </details>
+
+  <script src="script.js"></script>
+</body>
+</html>
