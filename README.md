@@ -41,7 +41,7 @@ The simulation is sub-stepped so the step size never exceeds 0.05 time units, wh
 With merging on, two bodies that come within 70% of their combined radii become one. The new body has the summed mass, the mass-weighted centre position and the momentum-conserving velocity. Radius follows mass assuming constant density.
 
 #### Energy Drift:
-The panel compares total energy (kinetic plus potential) with a baseline. The baseline resets whenever you add a body, merge two, or change G, because those events change the energy on purpose.
+The panel compares total energy (kinetic + potential) with a baseline. The baseline resets whenever you add a body, merge two, or change G, because those events change the energy on purpose.
 
 #### Rendering:
 Everything is drawn on a 2D canvas. Trails are produced by fading the previous frame rather than storing point histories, so they cost nothing; they are cleared when you pan or zoom.
