@@ -19,7 +19,8 @@ The sliders change speed, the gravitational constant (G) and the mass of bodies 
 
 ## How it works
 
-**Gravity.** Each pair of bodies attracts with the force
+#### Gravity
+Each pair of bodies attracts with the force
 
 $$
 \begin{align}
@@ -30,7 +31,8 @@ $$
 
 The small softening term $\epsilon$ stops the force from blowing up when two bodies pass very close to each other. Forces are summed over every pair, so the cost grows with the square of the body count.
 
-**Integration.** Positions and velocities are advanced with velocity Verlet (a kick-drift-kick leapfrog scheme). It is second-order accurate and symplectic, so energy errors stay bounded over long runs instead of steadily growing, which is why orbits stay orbits.
+#### Integration
+Positions and velocities are advanced with velocity Verlet (a kick-drift-kick leapfrog scheme). It is second-order accurate and symplectic, so energy errors stay bounded over long runs instead of steadily growing, which is why orbits stay orbits.
 
 **Time steps.** The simulation is sub-stepped so the step size never exceeds 0.05 time units, whatever the frame rate or speed setting. Simulated time is tied to real time, so it runs at the same pace on 60 Hz and 120 Hz displays.
 
@@ -41,10 +43,3 @@ The small softening term $\epsilon$ stops the force from blowing up when two bod
 **Rendering.** Everything is drawn on a 2D canvas. Trails are produced by fading the previous frame rather than storing point histories, so they cost nothing; they are cleared when you pan or zoom.
 
 Units are arbitrary. With G = 1, a body at distance `r` from mass `M` has circular orbital speed `√(G·M / r)`, which is what the scenarios use.
-
-## Limitations and ideas
-
-- The force calculation is O(n²). A few hundred bodies run smoothly on most machines; thousands would need a Barnes–Hut quadtree.
-- The simulation is 2D only.
-- Panning needs a mouse (or trackpad); touch screens can launch bodies and zoom is mouse-wheel only.
-- Ideas: follow-the-body camera, velocity arrows, saving and loading scenarios, elastic collisions.
