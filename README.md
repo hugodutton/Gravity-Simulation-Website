@@ -4,6 +4,8 @@ An interactive gravity sandbox that runs entirely in your browser. Launch planet
 
 **Website:** https://hugodutton.github.io/Gravity-Simulation-Website/
 
+---
+
 ## Controls
 
 | Action | How |
@@ -16,6 +18,8 @@ An interactive gravity sandbox that runs entirely in your browser. Launch planet
 | Reset the scenario | Reset button |
 
 The sliders change speed, the gravitational constant ($G$) and the mass of bodies you launch. Changing $G$ mid-orbit is a good way to see what happens when the physics shifts underneath a stable system.
+
+---
 
 ## How it works
 
